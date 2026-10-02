@@ -26,7 +26,6 @@
             overflow-x: hidden;
         }
 
-        /* Contenedor principal con altura exacta y controlada */
         .card-container {
             width: 100%;
             max-width: 420px;
@@ -40,7 +39,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
-            padding: 16px 20px; /* Margen lateral más amplio para ensanchar burbujas */
+            padding: 16px 20px;
             position: relative;
             box-sizing: border-box;
         }
@@ -105,7 +104,6 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        /* Burbujas más anchas y con espacio ideal */
         .links-container {
             display: flex;
             flex-direction: column;
@@ -122,7 +120,7 @@
             -webkit-backdrop-filter: blur(8px);
             border: 1px solid rgba(255, 255, 255, 0.14);
             border-radius: 12px;
-            padding: 11px 16px; /* Más ancho lateral */
+            padding: 11px 16px;
             text-decoration: none;
             color: #ffffff;
             font-weight: 500;
@@ -175,7 +173,7 @@
         .maps:hover { border-color: #ea4335; box-shadow: 0 6px 20px rgba(234, 67, 53, 0.3); }
         .maps i { color: #ea4335; }
 
-        /* Bloque 3D LAB ubicado perfectamente a los 3/4 (sin irse al fondo absoluto) */
+        /* 3D LAB elevado exactamente a los 3/4 de la página */
         .footer {
             display: flex;
             flex-direction: column;
@@ -191,6 +189,7 @@
             border-radius: 8px;
             width: 100%;
             max-width: 180px;
+            margin-bottom: 24px; /* <--- Esto lo sube los píxeles necesarios para dejarlo en su lugar perfecto */
         }
 
         .footer-brand {
@@ -229,7 +228,7 @@
             <div class="address-tag">Avenida San Martín 1041, Colón, Entre Ríos</div>
         </div>
 
-        <!-- Botones de Redes y Contacto (más anchos y con aire) -->
+        <!-- Botones de Redes y Contacto -->
         <div class="links-container">
             <a href="https://wa.me/5493447547736" target="_blank" class="social-btn whatsapp">
                 <i class="fa-brands fa-whatsapp"></i>
@@ -264,7 +263,7 @@
             </a>
         </div>
 
-        <!-- Pie / 3D Lab reubicado a los 3/4 de la tarjeta (fijo y prolijo) -->
+        <!-- Pie / 3D Lab reubicado unos píxeles más arriba -->
         <div class="footer">
             <span>Powered by</span>
             <a href="#" class="footer-brand">
