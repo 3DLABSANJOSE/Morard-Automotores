@@ -26,12 +26,12 @@
             overflow-x: hidden;
         }
 
-        /* Contenedor principal estilo tarjeta móvil ultra-optimizado */
+        /* Contenedor principal compacto para que entre todo sin scroll */
         .card-container {
             width: 100%;
             max-width: 440px;
             height: 100vh;
-            max-height: 820px;
+            max-height: 750px; /* Reducido para compactar la altura total */
             background: linear-gradient(rgba(5, 7, 12, 0.82), rgba(2, 3, 5, 0.92)), url('auto.jpg');
             background-size: cover;
             background-position: center;
@@ -39,7 +39,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding: 12px 16px;
+            padding: 8px 16px; /* Márgenes superior e inferior mínimos */
             position: relative;
             box-sizing: border-box;
         }
@@ -63,7 +63,7 @@
 
         @media (min-width: 480px) {
             .card-container {
-                min-height: 88vh;
+                min-height: 85vh;
                 border-radius: 24px;
                 border: 1px solid rgba(255, 255, 255, 0.1);
             }
@@ -74,14 +74,14 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            margin-top: 2px;
+            margin-top: 0px;
         }
 
         .logo-wrapper {
             width: 100%;
-            max-width: 210px;
+            max-width: 180px; /* Logo optimizado en tamaño para ganar espacio arriba */
             overflow: hidden;
-            margin-bottom: 6px;
+            margin-bottom: 2px;
         }
 
         .logo-wrapper img {
@@ -94,12 +94,12 @@
         .address-tag {
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-            font-size: 0.7rem;
-            letter-spacing: 1px;
+            font-size: 0.65rem;
+            letter-spacing: 0.8px;
             color: #cbd5e0;
             text-transform: uppercase;
             background: rgba(0, 0, 0, 0.5);
-            padding: 4px 10px;
+            padding: 3px 8px;
             border-radius: 6px;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
@@ -107,9 +107,9 @@
         .links-container {
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 6px; /* Espacio justo y necesario entre botones sin achicarlos */
             width: 100%;
-            margin: 6px 0;
+            margin: 2px 0;
         }
 
         .social-btn {
@@ -120,7 +120,7 @@
             -webkit-backdrop-filter: blur(8px);
             border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 12px;
-            padding: 10px 14px;
+            padding: 10px 14px; /* Tamaño de botones intacto y cómodo */
             text-decoration: none;
             color: #ffffff;
             font-weight: 500;
@@ -176,12 +176,12 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 2px;
+            gap: 1px;
             text-align: center;
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             color: #a0aec0;
             border-top: 1px solid rgba(255, 255, 255, 0.08);
-            padding-top: 6px;
+            padding-top: 4px;
             background: rgba(0, 0, 0, 0.4);
             backdrop-filter: blur(4px);
             border-radius: 6px;
@@ -190,15 +190,15 @@
         .footer-brand {
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 5px;
             text-decoration: none;
             color: #ffffff;
             font-weight: 500;
         }
 
         .footer-brand img {
-            width: 18px;
-            height: 18px;
+            width: 16px;
+            height: 16px;
             border-radius: 4px;
             object-fit: cover;
         }
@@ -235,7 +235,7 @@
             <a href="https://www.instagram.com/morardautomotores?stkn=MTF2dHdrNzNveDN5OQ==" target="_blank" class="social-btn instagram">
                 <i class="fa-brands fa-instagram"></i>
                 <div class="btn-text">
-                    <span class="btn-title">Instagram</span>
+                    <span class="btn-title5">Instagram</span>
                     <span class="btn-subtitle">Catálogo de vehículos y novedades</span>
                 </div>
             </a>
