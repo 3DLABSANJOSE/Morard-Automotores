@@ -26,11 +26,12 @@
             overflow-x: hidden;
         }
 
-        /* Contenedor principal alineado arriba para compactar los espacios */
+        /* Contenedor principal equilibrado con aire óptimo */
         .card-container {
             width: 100%;
             max-width: 440px;
-            min-height: 100vh;
+            height: 100vh;
+            max-height: 740px;
             background: linear-gradient(rgba(5, 7, 12, 0.82), rgba(2, 3, 5, 0.92)), url('auto.jpg');
             background-size: cover;
             background-position: center;
@@ -38,11 +39,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start; /* Alinea todo arriba para eliminar espacios muertos */
-            padding: 12px 16px 20px 16px;
+            justify-content: space-between;
+            padding: 10px 16px;
             position: relative;
             box-sizing: border-box;
-            gap: 12px; /* Espacio controlado entre bloques */
         }
 
         .card-container::before {
@@ -64,7 +64,7 @@
 
         @media (min-width: 480px) {
             .card-container {
-                min-height: 88vh;
+                min-height: 85vh;
                 border-radius: 24px;
                 border: 1px solid rgba(255, 255, 255, 0.1);
             }
@@ -76,14 +76,14 @@
             align-items: center;
             text-align: center;
             width: 100%;
-            margin-top: 4px;
+            margin-top: 2px;
         }
 
         .logo-wrapper {
             width: 100%;
-            max-width: 190px;
+            max-width: 175px;
             overflow: hidden;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
 
         .logo-wrapper img {
@@ -96,12 +96,12 @@
         .address-tag {
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-            font-size: 0.68rem;
+            font-size: 0.65rem;
             letter-spacing: 0.8px;
             color: #cbd5e0;
             text-transform: uppercase;
             background: rgba(0, 0, 0, 0.5);
-            padding: 4px 10px;
+            padding: 3px 8px;
             border-radius: 6px;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
@@ -109,8 +109,9 @@
         .links-container {
             display: flex;
             flex-direction: column;
-            gap: 8px; /* Espacio cómodo entre burbujas sin achicarlas */
+            gap: 10px; /* Espacio equilibrado y con más aire entre burbujas */
             width: 100%;
+            margin: 6px 0;
         }
 
         .social-btn {
@@ -121,7 +122,7 @@
             -webkit-backdrop-filter: blur(8px);
             border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 12px;
-            padding: 12px 16px; /* Tamaño completo y cómodo original */
+            padding: 11px 14px; /* Relleno interior cómodo y amplio */
             text-decoration: none;
             color: #ffffff;
             font-weight: 500;
@@ -137,9 +138,9 @@
         }
 
         .social-btn i {
-            font-size: 1.3rem;
-            margin-right: 14px;
-            width: 24px;
+            font-size: 1.25rem;
+            margin-right: 12px;
+            width: 22px;
             text-align: center;
         }
 
@@ -151,12 +152,12 @@
         .social-btn .btn-title {
             font-family: 'Montserrat', sans-serif;
             font-weight: 600;
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             letter-spacing: 0.5px;
         }
 
         .social-btn .btn-subtitle {
-            font-size: 0.7rem;
+            font-size: 0.66rem;
             color: #a0aec0;
             margin-top: 1px;
         }
@@ -177,37 +178,37 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 2px;
+            gap: 1px;
             text-align: center;
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             color: #a0aec0;
             border-top: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 6px 20px;
+            padding: 4px 16px;
             background: rgba(0, 0, 0, 0.4);
             backdrop-filter: blur(4px);
-            border-radius: 8px;
-            margin-top: auto; /* Empuja el footer exactamente a la altura donde marcaste la línea violeta */
+            border-radius: 6px;
             width: 100%;
-            max-width: 220px;
+            max-width: 200px;
         }
 
         .footer-brand {
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 5px;
             text-decoration: none;
             color: #ffffff;
             font-weight: 500;
         }
 
         .footer-brand img {
-            width: 18px;
-            height: 18px;
+            width: 16px;
+            height: 16px;
             border-radius: 4px;
             object-fit: cover;
         }
 
         .footer-brand span {
+            content: '';
             color: #00d9ff;
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
@@ -226,7 +227,7 @@
             <div class="address-tag">Avenida San Martín 1041, Colón, Entre Ríos</div>
         </div>
 
-        <!-- Botones de Redes y Contacto (Subidos hacia arriba) -->
+        <!-- Botones de Redes y Contacto con buen espacio -->
         <div class="links-container">
             <a href="https://wa.me/5493447547736" target="_blank" class="social-btn whatsapp">
                 <i class="fa-brands fa-whatsapp"></i>
@@ -261,7 +262,7 @@
             </a>
         </div>
 
-        <!-- Pie de página posicionado exactamente donde indicaste -->
+        <!-- Pie de página con Powered by y logo 3D LAB -->
         <div class="footer">
             <span>Powered by</span>
             <a href="#" class="footer-brand">
