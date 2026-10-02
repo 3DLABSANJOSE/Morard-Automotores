@@ -26,7 +26,7 @@
             overflow-x: hidden;
         }
 
-        /* Contenedor principal equilibrado con aire óptimo */
+        /* Contenedor principal para organizar los elementos en orden */
         .card-container {
             width: 100%;
             max-width: 440px;
@@ -39,10 +39,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-between;
-            padding: 10px 16px;
+            justify-content: flex-start; /* Alinea desde arriba hacia abajo */
+            padding: 12px 20px; /* Más margen lateral para ensanchar el contenido */
             position: relative;
             box-sizing: border-box;
+            gap: 16px; /* Espacio general entre secciones */
         }
 
         .card-container::before {
@@ -76,14 +77,14 @@
             align-items: center;
             text-align: center;
             width: 100%;
-            margin-top: 2px;
+            margin-top: 4px;
         }
 
         .logo-wrapper {
             width: 100%;
-            max-width: 175px;
+            max-width: 185px;
             overflow: hidden;
-            margin-bottom: 2px;
+            margin-bottom: 4px;
         }
 
         .logo-wrapper img {
@@ -101,34 +102,35 @@
             color: #cbd5e0;
             text-transform: uppercase;
             background: rgba(0, 0, 0, 0.5);
-            padding: 3px 8px;
+            padding: 4px 10px;
             border-radius: 6px;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
+        /* Contenedor de burbujas más anchas y con más aire */
         .links-container {
             display: flex;
             flex-direction: column;
-            gap: 10px; /* Espacio equilibrado y con más aire entre burbujas */
+            gap: 12px; /* Mayor separación entre burbujas */
             width: 100%;
-            margin: 6px 0;
         }
 
         .social-btn {
             display: flex;
             align-items: center;
-            background: rgba(15, 18, 25, 0.75);
+            background: rgba(15, 18, 25, 0.78);
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 12px;
-            padding: 11px 14px; /* Relleno interior cómodo y amplio */
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 14px;
+            padding: 12px 18px; /* Más espacio interno y ancho */
             text-decoration: none;
             color: #ffffff;
             font-weight: 500;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            width: 100%;
         }
 
         .social-btn:hover {
@@ -138,9 +140,9 @@
         }
 
         .social-btn i {
-            font-size: 1.25rem;
-            margin-right: 12px;
-            width: 22px;
+            font-size: 1.3rem;
+            margin-right: 14px;
+            width: 24px;
             text-align: center;
         }
 
@@ -152,14 +154,14 @@
         .social-btn .btn-title {
             font-family: 'Montserrat', sans-serif;
             font-weight: 600;
-            font-size: 0.82rem;
+            font-size: 0.85rem;
             letter-spacing: 0.5px;
         }
 
         .social-btn .btn-subtitle {
-            font-size: 0.66rem;
+            font-size: 0.68rem;
             color: #a0aec0;
-            margin-top: 1px;
+            margin-top: 2px;
         }
 
         .whatsapp:hover { border-color: #25d366; box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3); }
@@ -174,45 +176,54 @@
         .maps:hover { border-color: #ea4335; box-shadow: 0 6px 20px rgba(234, 67, 53, 0.3); }
         .maps i { color: #ea4335; }
 
-        .footer {
+        /* Bloque de 3D LAB reubicado a los 3/4 de la página (debajo de las burbujas) */
+        .footer-3d {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 1px;
+            gap: 3px;
             text-align: center;
-            font-size: 0.6rem;
-            color: #a0aec0;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 4px 16px;
-            background: rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(4px);
-            border-radius: 6px;
+            padding: 8px 16px;
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(6px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
             width: 100%;
-            max-width: 200px;
+            max-width: 190px;
+            margin-top: auto; /* Empuja el bloque a una posición equilibrada antes del cierre */
+            margin-bottom: 12px;
         }
 
-        .footer-brand {
+        .footer-3d span {
+            font-size: 0.58rem;
+            color: #8892b0;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .logo-3d-container {
+            perspective: 600px;
+            width: 32px;
+            height: 32px;
             display: flex;
+            justify-content: center;
             align-items: center;
-            gap: 5px;
-            text-decoration: none;
-            color: #ffffff;
-            font-weight: 500;
         }
 
-        .footer-brand img {
-            width: 16px;
-            height: 16px;
-            border-radius: 4px;
+        .logo-3d-container img {
+            width: 30px;
+            height: 30px;
             object-fit: cover;
+            border-radius: 6px;
+            animation: rotate3dLogo 4s infinite linear;
+            filter: drop-shadow(0 0 6px rgba(0, 217, 255, 0.6));
         }
 
-        .footer-brand span {
-            content: '';
-            color: #00d9ff;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            letter-spacing: 0.5px;
+        @keyframes rotate3dLogo {
+            0% { transform: rotateY(0deg); }
+            50% { transform: rotateY(180deg) scale(1.1); }
+            100% { transform: rotateY(360deg); }
         }
     </style>
 </head>
@@ -227,7 +238,7 @@
             <div class="address-tag">Avenida San Martín 1041, Colón, Entre Ríos</div>
         </div>
 
-        <!-- Botones de Redes y Contacto con buen espacio -->
+        <!-- Botones de Redes y Contacto (más anchos y separados) -->
         <div class="links-container">
             <a href="https://wa.me/5493447547736" target="_blank" class="social-btn whatsapp">
                 <i class="fa-brands fa-whatsapp"></i>
@@ -262,13 +273,12 @@
             </a>
         </div>
 
-        <!-- Pie de página con Powered by y logo 3D LAB -->
-        <div class="footer">
+        <!-- Bloque de 3D LAB reubicado a los 3/4 de la página -->
+        <div class="footer-3d">
             <span>Powered by</span>
-            <a href="#" class="footer-brand">
-                <img src="logo-3dlab.png" alt="3D LAB Logo">
-                <span>3D LAB</span>
-            </a>
+            <div class="logo-3d-container">
+                <img src="logo-3dlab.png" alt="3D LAB Logo 360">
+            </div>
         </div>
     </div>
 
